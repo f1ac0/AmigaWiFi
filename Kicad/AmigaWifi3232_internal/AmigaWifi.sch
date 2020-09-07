@@ -1,0 +1,747 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "AmigaWifi Internal"
+Date "2018-03-10"
+Rev "0.2"
+Comp "FLACO 2018, licence of this schematic is CC-BY-NC-SA"
+Comment1 "Connects an ESP8266 internally to a retro-computer serial port"
+Comment2 "Breaks the UART IOs from an ESP-12F through a MAX3232"
+Comment3 "Supports an optional WS2812B LED for status indication"
+Comment4 "Use with https://github.com/bozimmerman/Zimodem firmware. Check the ESP pin definition !"
+$EndDescr
+$Comp
+L AmigaWifi-rescue:GND #PWR01
+U 1 1 59F8C899
+P 6500 4550
+F 0 "#PWR01" H 6500 4300 50  0001 C CNN
+F 1 "GND" H 6500 4400 50  0000 C CNN
+F 2 "" H 6500 4550 50  0000 C CNN
+F 3 "" H 6500 4550 50  0000 C CNN
+	1    6500 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L AmigaWifi-rescue:GND #PWR02
+U 1 1 59F8C9FA
+P 5000 1800
+F 0 "#PWR02" H 5000 1550 50  0001 C CNN
+F 1 "GND" H 5000 1650 50  0000 C CNN
+F 2 "" H 5000 1800 50  0000 C CNN
+F 3 "" H 5000 1800 50  0000 C CNN
+	1    5000 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L AmigaWifi-rescue:+3.3V #PWR03
+U 1 1 59F8CAEC
+P 5350 1250
+F 0 "#PWR03" H 5350 1100 50  0001 C CNN
+F 1 "+3.3V" H 5350 1390 50  0000 C CNN
+F 2 "" H 5350 1250 50  0000 C CNN
+F 3 "" H 5350 1250 50  0000 C CNN
+	1    5350 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L AmigaWifi-rescue:C_Small C3
+U 1 1 59F8E472
+P 7900 2850
+F 0 "C3" H 7910 2920 50  0000 L CNN
+F 1 "0.1uF" H 7910 2770 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 7900 2850 50  0001 C CNN
+F 3 "" H 7900 2850 50  0000 C CNN
+	1    7900 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L AmigaWifi-rescue:C_Small C5
+U 1 1 59F8E4F3
+P 7500 2600
+F 0 "C5" H 7510 2670 50  0000 L CNN
+F 1 "0.1uF" H 7510 2520 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 7500 2600 50  0001 C CNN
+F 3 "" H 7500 2600 50  0000 C CNN
+	1    7500 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L AmigaWifi-rescue:C_Small C6
+U 1 1 59F8E53E
+P 7700 3050
+F 0 "C6" H 7710 3120 50  0000 L CNN
+F 1 "0.1uF" H 7710 2970 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 7700 3050 50  0001 C CNN
+F 3 "" H 7700 3050 50  0000 C CNN
+	1    7700 3050
+	-1   0    0    1   
+$EndComp
+$Comp
+L AmigaWifi-rescue:C_Small C7
+U 1 1 59F8E5CD
+P 7500 3250
+F 0 "C7" H 7510 3320 50  0000 L CNN
+F 1 "0.1uF" H 7510 3170 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 7500 3250 50  0001 C CNN
+F 3 "" H 7500 3250 50  0000 C CNN
+	1    7500 3250
+	-1   0    0    1   
+$EndComp
+$Comp
+L AmigaWifi-rescue:C_Small C4
+U 1 1 59F8E727
+P 5500 2600
+F 0 "C4" H 5510 2670 50  0000 L CNN
+F 1 "0.1uF" H 5510 2520 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 5500 2600 50  0001 C CNN
+F 3 "" H 5500 2600 50  0000 C CNN
+	1    5500 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L AmigaWifi-rescue:GND #PWR04
+U 1 1 59F8FAC2
+P 5350 5600
+F 0 "#PWR04" H 5350 5350 50  0001 C CNN
+F 1 "GND" H 5350 5450 50  0000 C CNN
+F 2 "" H 5350 5600 50  0000 C CNN
+F 3 "" H 5350 5600 50  0000 C CNN
+	1    5350 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L AmigaWifi-rescue:GND #PWR05
+U 1 1 59F8FC72
+P 2800 5600
+F 0 "#PWR05" H 2800 5350 50  0001 C CNN
+F 1 "GND" H 2800 5450 50  0000 C CNN
+F 2 "" H 2800 5600 50  0000 C CNN
+F 3 "" H 2800 5600 50  0000 C CNN
+	1    2800 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L AmigaWifi-rescue:SW_PUSH SW1
+U 1 1 59F8FCB0
+P 2500 5600
+F 0 "SW1" H 2650 5710 50  0000 C CNN
+F 1 "Reset" H 2500 5520 50  0000 C CNN
+F 2 "Buttons_Switches_SMD:SW_SPST_FSMSM" H 2500 5600 50  0001 C CNN
+F 3 "" H 2500 5600 50  0000 C CNN
+	1    2500 5600
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4350 1350
+$Comp
+L AmigaWifi-rescue:C_Small C9
+U 1 1 59F9DABF
+P 5350 1400
+F 0 "C9" H 5360 1470 50  0000 L CNN
+F 1 "22uF" H 5360 1320 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 5350 1400 50  0001 C CNN
+F 3 "" H 5350 1400 50  0000 C CNN
+	1    5350 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L AmigaWifi-rescue:C_Small C8
+U 1 1 59F9DB56
+P 2900 1400
+F 0 "C8" H 2910 1470 50  0000 L CNN
+F 1 "22uF" H 2910 1320 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 2900 1400 50  0001 C CNN
+F 3 "" H 2900 1400 50  0000 C CNN
+	1    2900 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L AmigaWifi-rescue:GND #PWR06
+U 1 1 59F9F6EB
+P 1850 1450
+F 0 "#PWR06" H 1850 1200 50  0001 C CNN
+F 1 "GND" H 1850 1300 50  0000 C CNN
+F 2 "" H 1850 1450 50  0000 C CNN
+F 3 "" H 1850 1450 50  0000 C CNN
+	1    1850 1450
+	1    0    0    -1  
+$EndComp
+Text GLabel 9300 2500 0    60   Input ~ 0
+RXD
+Text GLabel 9300 2600 0    60   Output ~ 0
+TXD
+Text GLabel 9300 2400 0    60   Input ~ 0
+GND
+Text GLabel 7300 3450 2    60   Output ~ 0
+RXD
+Text GLabel 7300 3850 2    60   Input ~ 0
+TXD
+Text GLabel 6500 4550 2    60   Input ~ 0
+GND
+$Comp
+L AmigaWifi-rescue:GND #PWR07
+U 1 1 59FBC0E4
+P 7900 3350
+F 0 "#PWR07" H 7900 3100 50  0001 C CNN
+F 1 "GND" H 7900 3200 50  0000 C CNN
+F 2 "" H 7900 3350 50  0000 C CNN
+F 3 "" H 7900 3350 50  0000 C CNN
+	1    7900 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L AmigaWifi-rescue:+5V #PWR08
+U 1 1 5A03735C
+P 1850 1150
+F 0 "#PWR08" H 1850 1000 50  0001 C CNN
+F 1 "+5V" H 1850 1290 50  0000 C CNN
+F 2 "" H 1850 1150 50  0000 C CNN
+F 3 "" H 1850 1150 50  0000 C CNN
+	1    1850 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L AmigaWifi-rescue:+5V #PWR09
+U 1 1 5A0373A2
+P 2900 1250
+F 0 "#PWR09" H 2900 1100 50  0001 C CNN
+F 1 "+5V" H 2900 1390 50  0000 C CNN
+F 2 "" H 2900 1250 50  0000 C CNN
+F 3 "" H 2900 1250 50  0000 C CNN
+	1    2900 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L AmigaWifi-rescue:+5V #PWR010
+U 1 1 5A0377E9
+P 3200 6400
+F 0 "#PWR010" H 3200 6250 50  0001 C CNN
+F 1 "+5V" H 3200 6540 50  0000 C CNN
+F 2 "" H 3200 6400 50  0000 C CNN
+F 3 "" H 3200 6400 50  0000 C CNN
+	1    3200 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L AmigaWifi-rescue:GND #PWR011
+U 1 1 5A03782F
+P 4000 6500
+F 0 "#PWR011" H 4000 6250 50  0001 C CNN
+F 1 "GND" H 4000 6350 50  0000 C CNN
+F 2 "" H 4000 6500 50  0000 C CNN
+F 3 "" H 4000 6500 50  0000 C CNN
+	1    4000 6500
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4000 6400
+Wire Wire Line
+	4350 1250 5350 1250
+Connection ~ 4050 1800
+Connection ~ 2900 1250
+Connection ~ 5000 1800
+Wire Wire Line
+	4050 1800 4050 1650
+Wire Wire Line
+	2900 1300 2900 1250
+Wire Wire Line
+	2900 1500 2900 1800
+Wire Wire Line
+	5350 1250 5350 1300
+Wire Wire Line
+	5350 1800 5350 1500
+Wire Wire Line
+	2900 1250 3300 1250
+Wire Wire Line
+	2900 1800 3300 1800
+Wire Wire Line
+	1750 1350 1850 1350
+Wire Wire Line
+	1850 1350 1850 1450
+Wire Wire Line
+	1750 1250 1850 1250
+Wire Wire Line
+	1850 1250 1850 1150
+Wire Wire Line
+	7500 3350 7700 3350
+Wire Wire Line
+	7700 3350 7700 3150
+Wire Wire Line
+	7900 3350 7900 2950
+Connection ~ 7700 3350
+Wire Wire Line
+	7500 3150 7300 3150
+Wire Wire Line
+	7700 2950 7300 2950
+Wire Wire Line
+	7900 2750 7900 2150
+Wire Wire Line
+	7900 2150 6500 2150
+Wire Wire Line
+	3750 1350 3650 1350
+Wire Wire Line
+	3650 1350 3650 1250
+Connection ~ 3650 1250
+Text GLabel 4100 3100 2    60   Input ~ 0
+LTXD
+Text GLabel 5700 3850 0    60   Output ~ 0
+LTXD
+Text GLabel 5700 3450 0    60   Input ~ 0
+LRXD
+Text GLabel 4100 3000 2    60   Input ~ 0
+LRXD
+Text GLabel 4750 5600 0    60   Input ~ 0
+PROG
+Text GLabel 4100 3400 2    60   Input ~ 0
+PROG
+Text GLabel 2300 3000 0    60   Input ~ 0
+RST
+Text GLabel 2200 5600 0    60   Input ~ 0
+RST
+Text GLabel 1600 3100 0    60   Output ~ 0
+LED
+Text GLabel 2200 6500 0    60   Input ~ 0
+LED
+Wire Wire Line
+	5700 2450 5500 2450
+Wire Wire Line
+	5500 2450 5500 2500
+Wire Wire Line
+	5500 2700 5500 2750
+Wire Wire Line
+	5500 2750 5700 2750
+Wire Wire Line
+	7300 2450 7500 2450
+Wire Wire Line
+	7500 2450 7500 2500
+Wire Wire Line
+	7500 2700 7500 2750
+Wire Wire Line
+	7500 2750 7300 2750
+Connection ~ 7900 3350
+Wire Wire Line
+	7300 3150 7300 3250
+$Comp
+L AmigaWifi-rescue:+3.3V #PWR012
+U 1 1 5A0BF185
+P 6500 2150
+F 0 "#PWR012" H 6500 2000 50  0001 C CNN
+F 1 "+3.3V" H 6500 2290 50  0000 C CNN
+F 2 "" H 6500 2150 50  0000 C CNN
+F 3 "" H 6500 2150 50  0000 C CNN
+	1    6500 2150
+	1    0    0    -1  
+$EndComp
+Text GLabel 9300 3400 0    60   Input ~ 0
+VCC
+Text GLabel 7900 2300 2    60   Input ~ 0
+VCC
+Text GLabel 9300 3300 0    60   Input ~ 0
+GND
+Text GLabel 9300 3500 0    60   Input ~ 0
+SCL
+Text GLabel 9300 3600 0    60   Input ~ 0
+SDA
+Text GLabel 2300 3400 0    60   Output ~ 0
+SCL
+Text GLabel 1600 3300 0    60   Output ~ 0
+SDA
+$Comp
+L AmigaWifi-rescue:MAX3232 MAX3232
+U 1 1 5A199B25
+P 6500 3350
+F 0 "MAX3232" H 6400 4475 50  0000 R CNN
+F 1 "MAX3232" H 6400 4400 50  0000 R CNN
+F 2 "Housings_SOIC:SOIC-16_3.9x9.9mm_Pitch1.27mm" H 6550 2300 50  0001 L CNN
+F 3 "" H 6500 3450 50  0001 C CNN
+	1    6500 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L AmigaWifi-rescue:SPX3819M5-L-3-3 SPX3819
+U 1 1 5A19A0C1
+P 4050 1350
+F 0 "SPX3819" H 3900 1575 50  0000 C CNN
+F 1 "SPX3819M5-L-3-3" H 4050 1575 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23-5_HandSoldering" H 4050 1675 50  0001 C CNN
+F 3 "" H 4050 1350 50  0001 C CNN
+	1    4050 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L AmigaWifi-rescue:WS2812B LED1
+U 1 1 5A19A594
+P 3600 6400
+F 0 "LED1" H 3600 6200 50  0000 C CNN
+F 1 "WS2812B" H 3600 6500 50  0000 C CNN
+F 2 "LEDs:LED_WS2812B-PLCC4" H 3600 6100 50  0001 C CNN
+F 3 "" H 3600 6350 50  0001 C CNN
+	1    3600 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L AmigaWifi-rescue:PWR_FLAG #FLG013
+U 1 1 5A19C56D
+P 2100 1250
+F 0 "#FLG013" H 2100 1325 50  0001 C CNN
+F 1 "PWR_FLAG" H 2100 1400 50  0000 C CNN
+F 2 "" H 2100 1250 50  0001 C CNN
+F 3 "" H 2100 1250 50  0001 C CNN
+	1    2100 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L AmigaWifi-rescue:PWR_FLAG #FLG014
+U 1 1 5A19C5A7
+P 2100 1350
+F 0 "#FLG014" H 2100 1425 50  0001 C CNN
+F 1 "PWR_FLAG" H 2100 1500 50  0000 C CNN
+F 2 "" H 2100 1350 50  0001 C CNN
+F 3 "" H 2100 1350 50  0001 C CNN
+	1    2100 1350
+	-1   0    0    1   
+$EndComp
+Connection ~ 1850 1250
+Connection ~ 1850 1350
+$Comp
+L AmigaWifi-rescue:Conn_01x04 J5
+U 1 1 5A19DF3D
+P 9500 3400
+F 0 "J5" H 9500 3600 50  0000 C CNN
+F 1 "Display" H 9500 3100 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 9500 3400 50  0001 C CNN
+F 3 "" H 9500 3400 50  0001 C CNN
+	1    9500 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L AmigaWifi-rescue:Conn_01x02 J1
+U 1 1 5A19EB0A
+P 1550 1350
+F 0 "J1" H 1550 1450 50  0000 C CNN
+F 1 "Power" H 1550 1150 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 1550 1350 50  0001 C CNN
+F 3 "" H 1550 1350 50  0001 C CNN
+	1    1550 1350
+	-1   0    0    1   
+$EndComp
+$Comp
+L AmigaWifi-rescue:Jumper JP1
+U 1 1 5A1A0130
+P 5050 5600
+F 0 "JP1" H 5050 5750 50  0000 C CNN
+F 1 "Prog" H 5050 5520 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 5050 5600 50  0001 C CNN
+F 3 "" H 5050 5600 50  0001 C CNN
+	1    5050 5600
+	-1   0    0    1   
+$EndComp
+$Comp
+L AmigaWifi-rescue:BSS138 Q1
+U 1 1 5A29BD99
+P 2600 6400
+F 0 "Q1" H 2800 6475 50  0000 L CNN
+F 1 "BSS138" H 2800 6400 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23_Handsoldering" H 2800 6325 50  0001 L CIN
+F 3 "" H 2600 6400 50  0001 L CNN
+	1    2600 6400
+	0    1    1    0   
+$EndComp
+$Comp
+L AmigaWifi-rescue:R R1
+U 1 1 5A29BDF8
+P 2300 6350
+F 0 "R1" V 2380 6350 50  0000 C CNN
+F 1 "10k" V 2300 6350 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 2230 6350 50  0001 C CNN
+F 3 "" H 2300 6350 50  0001 C CNN
+	1    2300 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L AmigaWifi-rescue:R R2
+U 1 1 5A29BE49
+P 2900 6350
+F 0 "R2" V 2980 6350 50  0000 C CNN
+F 1 "10k" V 2900 6350 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 2830 6350 50  0001 C CNN
+F 3 "" H 2900 6350 50  0001 C CNN
+	1    2900 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L AmigaWifi-rescue:+5V #PWR015
+U 1 1 5A29BE94
+P 2900 6200
+F 0 "#PWR015" H 2900 6050 50  0001 C CNN
+F 1 "+5V" H 2900 6340 50  0000 C CNN
+F 2 "" H 2900 6200 50  0001 C CNN
+F 3 "" H 2900 6200 50  0001 C CNN
+	1    2900 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L AmigaWifi-rescue:+3.3V #PWR016
+U 1 1 5A29BED4
+P 2300 6200
+F 0 "#PWR016" H 2300 6050 50  0001 C CNN
+F 1 "+3.3V" H 2300 6340 50  0000 C CNN
+F 2 "" H 2300 6200 50  0001 C CNN
+F 3 "" H 2300 6200 50  0001 C CNN
+	1    2300 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 6200 2300 6200
+Wire Wire Line
+	2200 6500 2300 6500
+Connection ~ 2300 6500
+Wire Wire Line
+	2800 6500 2900 6500
+Connection ~ 2900 6500
+$Comp
+L AmigaWifi-rescue:CP_Small C2
+U 1 1 5AA42CE3
+P 3300 1600
+F 0 "C2" H 3310 1670 50  0000 L CNN
+F 1 "22uF" H 3310 1520 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D5.0mm_P2.50mm" H 3300 1600 50  0001 C CNN
+F 3 "" H 3300 1600 50  0001 C CNN
+	1    3300 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 1500 3300 1250
+Connection ~ 3300 1250
+Wire Wire Line
+	3300 1700 3300 1800
+Connection ~ 3300 1800
+$Comp
+L AmigaWifi-rescue:ESP-12F U1
+U 1 1 5AA438CD
+P 3200 3300
+F 0 "U1" H 3200 3200 50  0000 C CNN
+F 1 "ESP-12F" H 3200 3400 50  0000 C CNN
+F 2 "ESP8266:ESP-12E_SMD" H 3200 3300 50  0001 C CNN
+F 3 "" H 3200 3300 50  0001 C CNN
+	1    3200 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L AmigaWifi-rescue:C_Small C1
+U 1 1 5AA43D64
+P 1900 3800
+F 0 "C1" H 1910 3870 50  0000 L CNN
+F 1 "0.1uF" H 1910 3720 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 1900 3800 50  0001 C CNN
+F 3 "" H 1900 3800 50  0000 C CNN
+	1    1900 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L AmigaWifi-rescue:+3.3V #PWR017
+U 1 1 5AA43E9B
+P 2300 4000
+F 0 "#PWR017" H 2300 3850 50  0001 C CNN
+F 1 "+3.3V" H 2300 4140 50  0000 C CNN
+F 2 "" H 2300 4000 50  0000 C CNN
+F 3 "" H 2300 4000 50  0000 C CNN
+	1    2300 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L AmigaWifi-rescue:GND #PWR018
+U 1 1 5AA43EF1
+P 1900 3900
+F 0 "#PWR018" H 1900 3650 50  0001 C CNN
+F 1 "GND" H 1900 3750 50  0000 C CNN
+F 2 "" H 1900 3900 50  0000 C CNN
+F 3 "" H 1900 3900 50  0000 C CNN
+	1    1900 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L AmigaWifi-rescue:GND #PWR019
+U 1 1 5AA441B7
+P 4300 4000
+F 0 "#PWR019" H 4300 3750 50  0001 C CNN
+F 1 "GND" H 4300 3850 50  0000 C CNN
+F 2 "" H 4300 4000 50  0000 C CNN
+F 3 "" H 4300 4000 50  0000 C CNN
+	1    4300 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L AmigaWifi-rescue:R R3
+U 1 1 5AA44210
+P 4500 3750
+F 0 "R3" V 4580 3750 50  0000 C CNN
+F 1 "10k" V 4500 3750 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4430 3750 50  0001 C CNN
+F 3 "" H 4500 3750 50  0001 C CNN
+	1    4500 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 3700 4300 3700
+Wire Wire Line
+	4300 3700 4300 4000
+Wire Wire Line
+	4500 3900 4500 4000
+Wire Wire Line
+	4500 4000 4300 4000
+Wire Wire Line
+	4100 3600 4500 3600
+Wire Wire Line
+	1900 3700 2200 3700
+Wire Wire Line
+	2200 3700 2200 4000
+Wire Wire Line
+	2200 4000 2300 4000
+Connection ~ 2200 3700
+$Comp
+L AmigaWifi-rescue:+3.3V #PWR020
+U 1 1 5AA445EF
+P 1700 2800
+F 0 "#PWR020" H 1700 2650 50  0001 C CNN
+F 1 "+3.3V" H 1700 2940 50  0000 C CNN
+F 2 "" H 1700 2800 50  0000 C CNN
+F 3 "" H 1700 2800 50  0000 C CNN
+	1    1700 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 3200 1700 3200
+Wire Wire Line
+	1700 3200 1700 2800
+Text GLabel 9300 2700 0    60   Output ~ 0
+RTS
+Text GLabel 9300 2800 0    60   Input ~ 0
+CTS
+Text GLabel 7300 4050 2    60   Input ~ 0
+RTS
+Text GLabel 7300 3650 2    60   Output ~ 0
+CTS
+Text GLabel 5700 3650 0    60   Input ~ 0
+LCTS
+Text GLabel 5700 4050 0    60   Output ~ 0
+LRTS
+Text GLabel 4700 3600 2    60   Output ~ 0
+LCTS
+Text GLabel 2300 3600 0    60   Input ~ 0
+LRTS
+Connection ~ 4500 3600
+Wire Wire Line
+	2300 3300 1600 3300
+Wire Wire Line
+	1600 3300 1600 3100
+NoConn ~ 3450 4200
+NoConn ~ 3350 4200
+NoConn ~ 3250 4200
+NoConn ~ 3150 4200
+NoConn ~ 3050 4200
+NoConn ~ 2950 4200
+$Comp
+L AmigaWifi-rescue:TEST_1P J8
+U 1 1 5AA47FA1
+P 4600 3200
+F 0 "J8" H 4600 3470 50  0000 C CNN
+F 1 "05" H 4600 3400 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 4800 3200 50  0001 C CNN
+F 3 "" H 4800 3200 50  0001 C CNN
+	1    4600 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L AmigaWifi-rescue:TEST_1P J9
+U 1 1 5AA4802E
+P 4800 3300
+F 0 "J9" H 4800 3570 50  0000 C CNN
+F 1 "04" H 4800 3500 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 5000 3300 50  0001 C CNN
+F 3 "" H 5000 3300 50  0001 C CNN
+	1    4800 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L AmigaWifi-rescue:TEST_1P J10
+U 1 1 5AA480B5
+P 5000 3500
+F 0 "J10" H 5000 3770 50  0000 C CNN
+F 1 "02" H 5000 3700 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 5200 3500 50  0001 C CNN
+F 3 "" H 5200 3500 50  0001 C CNN
+	1    5000 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L AmigaWifi-rescue:TEST_1P J7
+U 1 1 5AA48122
+P 2000 2800
+F 0 "J7" H 2000 3070 50  0000 C CNN
+F 1 "ADC" H 2000 3000 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 2200 2800 50  0001 C CNN
+F 3 "" H 2200 2800 50  0001 C CNN
+	1    2000 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L AmigaWifi-rescue:TEST_1P J6
+U 1 1 5AA481EE
+P 1100 3500
+F 0 "J6" H 1100 3770 50  0000 C CNN
+F 1 "12" H 1100 3700 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 1300 3500 50  0001 C CNN
+F 3 "" H 1300 3500 50  0001 C CNN
+	1    1100 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 3100 2000 3100
+Wire Wire Line
+	2000 3100 2000 2800
+Wire Wire Line
+	2300 3500 1100 3500
+Wire Wire Line
+	4100 3200 4600 3200
+Wire Wire Line
+	4100 3300 4800 3300
+Wire Wire Line
+	4100 3500 5000 3500
+$Comp
+L AmigaWifi-rescue:Conn_01x05 J3
+U 1 1 5AA4A5C7
+P 9500 2600
+F 0 "J3" H 9500 2900 50  0000 C CNN
+F 1 "Serial" H 9500 2300 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm" H 9500 2600 50  0001 C CNN
+F 3 "" H 9500 2600 50  0001 C CNN
+	1    9500 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 1800 5000 1800
+Wire Wire Line
+	5000 1800 5350 1800
+Wire Wire Line
+	7700 3350 7900 3350
+Wire Wire Line
+	3650 1250 3750 1250
+Wire Wire Line
+	1850 1250 2100 1250
+Wire Wire Line
+	1850 1350 2100 1350
+Wire Wire Line
+	2300 6500 2400 6500
+Wire Wire Line
+	2900 6500 3200 6500
+Wire Wire Line
+	3300 1250 3650 1250
+Wire Wire Line
+	3300 1800 4050 1800
+Wire Wire Line
+	2200 3700 2300 3700
+Wire Wire Line
+	4500 3600 4700 3600
+$EndSCHEMATC
