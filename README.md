@@ -1,7 +1,7 @@
 # AmigaWiFi
-Different kinds of RS232 WiFi boards with ESP8266 to connect the Amiga to the world with Zimodem or esp\_slip\_router firmwares.
+Three different RS232 WiFi boards with ESP8266 to connect the Amiga to the world with Zimodem or esp\_slip\_router firmwares.
 
-With Zimodem (https://github.com/bozimmerman/Zimodem) by Bo Zimmerman, this board connects your Amiga can connect to telnet/BBS/xyzmodem/kermit services over IP on your local network or Internet.
+With Zimodem (https://github.com/bozimmerman/Zimodem) by Bo Zimmerman, this board can connect to telnet/BBS/xyzmodem/kermit services over IP on your local network or Internet.
 
 With esp\_slip\_router (https://github.com/martin-ger/esp\_slip\_router) by Martin Ger, this board is a SLIP router to connect your Amiga to Internet.
 
@@ -35,7 +35,7 @@ If you use the internal version of the board, disconnect any external device fro
 # Using it with Zimodem
 Check the Zimodem project page on how to build it with the Arduino framework.
 
-It is required to correct the pinouts before building :
+It is required to set the pinouts before building :
 ```
 # define DEFAULT_PIN_DSR 5  //To computer DSR
 # define DEFAULT_PIN_DTR 4  //To computer DTR
